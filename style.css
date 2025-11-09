@@ -1,13 +1,13 @@
 :root {
-    --bg-gradient: linear-gradient(135deg, #050b1a 0%, #0f1c39 45%, #112a52 100%);
-    --card-primary: rgba(15, 25, 54, 0.9);
-    --card-secondary: rgba(17, 35, 73, 0.9);
-    --border-color: rgba(148, 163, 184, 0.18);
-    --text-primary: #e2e8f0;
-    --text-secondary: #94a3b8;
-    --accent: #38bdf8;
-    --accent-strong: #0ea5e9;
-    --highlight: rgba(56, 189, 248, 0.15);
+    --bg-gradient: linear-gradient(135deg, #eef2ff 0%, #f8fafc 100%);
+    --card-primary: rgba(255, 255, 255, 0.92);
+    --card-secondary: rgba(248, 250, 255, 0.95);
+    --border-color: rgba(148, 163, 184, 0.25);
+    --text-primary: #1f2937;
+    --text-secondary: #475569;
+    --accent: #6366f1;
+    --accent-strong: #4f46e5;
+    --highlight: rgba(99, 102, 241, 0.15);
 }
 
 * {
@@ -35,20 +35,20 @@ main {
 
 header {
     background: var(--card-secondary);
-    border: 1px solid var(--border-color);
+    border: 1px solid rgba(148, 163, 184, 0.18);
     border-radius: 28px;
     padding: 40px 48px;
     text-align: center;
     position: relative;
     overflow: hidden;
-    box-shadow: 0 24px 50px rgba(8, 12, 32, 0.45);
+    box-shadow: 0 24px 45px rgba(148, 163, 184, 0.28);
 }
 
 header::after {
     content: "";
     position: absolute;
     inset: 0;
-    background: radial-gradient(circle at top right, rgba(56, 189, 248, 0.25), transparent 45%);
+    background: radial-gradient(circle at top right, rgba(99, 102, 241, 0.25), transparent 48%);
     pointer-events: none;
 }
 
@@ -57,13 +57,14 @@ h1 {
     letter-spacing: 0.28em;
     text-transform: uppercase;
     margin-bottom: 16px;
+    color: var(--text-primary);
 }
 
 .tagline {
     font-size: clamp(1rem, 2vw, 1.2rem);
     text-transform: uppercase;
     letter-spacing: 0.22em;
-    color: var(--text-secondary);
+    color: rgba(71, 85, 105, 0.85);
     margin: 18px auto;
 }
 
@@ -84,10 +85,10 @@ main {
 
 article {
     border-radius: 24px;
-    border: 1px solid var(--border-color);
+    border: 1px solid rgba(148, 163, 184, 0.22);
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
-    box-shadow: 0 18px 40px rgba(8, 12, 32, 0.35);
+    box-shadow: 0 20px 45px rgba(148, 163, 184, 0.28);
     padding: 36px 32px;
     display: flex;
     flex-direction: column;
@@ -99,7 +100,7 @@ article {
 }
 
 #mainRight {
-    background: rgba(13, 22, 45, 0.9);
+    background: rgba(255, 255, 255, 0.88);
 }
 
 section {
@@ -156,19 +157,19 @@ p {
 }
 
 i {
-    color: var(--accent);
+    color: var(--accent-strong);
     font-size: 0.95rem;
 }
 
 a {
-    color: var(--text-primary);
+    color: var(--accent-strong);
     text-decoration: none;
     transition: color 0.22s ease, text-shadow 0.22s ease;
 }
 
 a:hover {
     color: var(--accent);
-    text-shadow: 0 0 12px rgba(56, 189, 248, 0.55);
+    text-shadow: 0 0 12px rgba(99, 102, 241, 0.45);
 }
 
 ul {
@@ -196,7 +197,7 @@ ul li::before {
     height: 12px;
     border-radius: 50%;
     background: var(--highlight);
-    border: 2px solid var(--accent);
+    border: 2px solid rgba(99, 102, 241, 0.65);
 }
 
 #mainRight section ul li::before {
