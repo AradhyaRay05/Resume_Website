@@ -154,6 +154,11 @@ p {
     display: flex;
     align-items: center;
     gap: 10px;
+    flex-wrap: wrap;
+}
+
+#mainLeft section:first-of-type p a {
+    overflow-wrap: anywhere;
 }
 
 i {
@@ -217,33 +222,76 @@ ul li::before {
 @media screen and (max-width: 1024px) {
     main {
         grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    header {
+        padding: 36px 32px;
     }
 
     article {
-        padding: 32px 28px;
+        padding: 30px 26px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        padding: 36px 20px 52px;
+    }
+
+    header,
+    article {
+        border-radius: 22px;
+    }
+
+    ul li {
+        padding-left: 20px;
+    }
+
+    ul li::before {
+        top: 9px;
+        width: 10px;
+        height: 10px;
     }
 }
 
 @media screen and (max-width: 640px) {
     body {
-        padding: 32px 18px 48px;
-        gap: 24px;
+        padding: 28px 16px 44px;
+        gap: 20px;
     }
 
     header {
-        padding: 32px 28px;
+        padding: 30px 24px;
     }
 
     h1 {
-        letter-spacing: 0.18em;
+        font-size: 2.35rem;
+        letter-spacing: 0.14em;
     }
 
     .tagline {
-        letter-spacing: 0.16em;
+        letter-spacing: 0.12em;
+        font-size: 0.95rem;
+        margin: 14px auto;
+    }
+
+    hr {
+        width: 60px;
+    }
+
+    main {
+        gap: 20px;
     }
 
     article {
-        gap: 28px;
+        gap: 26px;
+        padding: 26px 22px;
+    }
+
+    ul li {
+        font-size: 0.94rem;
+        line-height: 1.6;
     }
 
     #mainLeft section:first-of-type p,
@@ -251,5 +299,42 @@ ul li::before {
         flex-direction: column;
         align-items: flex-start;
         gap: 4px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    body {
+        padding: 24px 14px 36px;
+    }
+
+    header {
+        padding: 26px 20px;
+    }
+
+    h1 {
+        font-size: 2.1rem;
+        letter-spacing: 0.1em;
+    }
+
+    .tagline {
+        font-size: 0.9rem;
+        letter-spacing: 0.1em;
+    }
+
+    article {
+        padding: 24px 18px;
+        gap: 22px;
+    }
+
+    section {
+        gap: 14px;
+    }
+
+    ul li {
+        padding-left: 18px;
+    }
+
+    ul li::before {
+        top: 7px;
     }
 }
